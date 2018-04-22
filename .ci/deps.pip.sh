@@ -13,8 +13,9 @@ esac
 pyenv install -ks 2.7.10
 
 for dep_version in "${dep_versions[@]}" ; do
+  ver=$(python --version 2>&1)
   pyenv install -ks $dep_version
-  pyenv local $dep_version 2.7.10
+  pyenv local $dep_version ver
   source .ci/env_variables.sh
 
   pip install pip==9.0.1
