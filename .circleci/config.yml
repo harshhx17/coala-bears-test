@@ -29,7 +29,7 @@ jobs:
                   libexpat-dev libncurses-dev zlib1g-dev git-core libssl-dev \
                   libsqlite3-dev sqlite3 libxslt1-dev libffi-dev yarn python3-dev \
                   libgdbm-dev libncurses5-dev automake libtool bison \
-                  libncursesw5-dev libc6-dev tk-dev
+                  libncursesw5-dev libc6-dev tk-dev python-numpy
 
             - run:
                 name: virtual-env
@@ -152,11 +152,6 @@ jobs:
                       python setup.py docs
                   fi
 
-            - run:
-                name: tests
-                when: always
-                command: bash .ci/tests.sh
-
             - save_cache:
                 key: coala-bears-dep-{{checksum "requirements.txt"}}
                 paths:
@@ -177,6 +172,11 @@ jobs:
                   - "project/node_modules"
                   - "../.ghc"
                   - "../.ghc-mod"
+
+            - run:
+                name: tests
+                when: always
+                command: bash .ci/tests.sh
 
     python-3.4: *build
 
