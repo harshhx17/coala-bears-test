@@ -183,11 +183,8 @@ jobs:
                 when: always
                 command: bash .ci/tests.sh
 
-    python-3.4: *build
-
 workflows:
     version: 2
     test:
         jobs:
             - python-3.5
-            - python-3.4
