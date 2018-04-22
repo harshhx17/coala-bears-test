@@ -1,0 +1,6 @@
+FROM circleci/jdk8:0.1.1
+
+RUN apt-get update
+RUN add-apt-repository -y ppa:avsm/ppa
+RUN add-apt-repository -y ppa:avsm/ppa
+RUN add-apt-repository -y ppa:ondrej/golang
