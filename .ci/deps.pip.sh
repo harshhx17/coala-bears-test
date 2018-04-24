@@ -13,7 +13,7 @@ esac
 pyenv install -ks 2.7.10
 
 for dep_version in "${dep_versions[@]}" ; do
-  ver=$(python --version 2>&1)
+  ver1=$(python --version 2>&1|tr ' ' '\n'| grep -v Python)
   pyenv install -ks $dep_version
   pyenv local $dep_version $ver
   source .ci/env_variables.sh
