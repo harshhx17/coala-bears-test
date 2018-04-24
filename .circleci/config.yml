@@ -2,7 +2,7 @@ version: 2
 jobs:
     python-3.5: &build
         docker:
-            - image: circleci/ubuntu-14.04-XXL-1325-0ccc9ce
+            - image: circleci/build-image:ubuntu-14.04-XXL-1325-0ccc9ce
 
         steps:
             - checkout
