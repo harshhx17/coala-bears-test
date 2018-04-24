@@ -64,8 +64,8 @@ jobs:
                   echo 'export PATH=$GOPATH/bin:$PATH' >> $BASH_ENV
                   echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
                   echo 'export PATH=/opt/cabal/bin:$PATH' >> $BASH_ENV
-                  echo 'export PATH=$HOME/coala-bears/node_modules/.bin:$PATH' >> $BASH_ENV
-                  echo 'export PATH=$HOME/coala-bears/vendor/bin:$PATH' >> $BASH_ENV
+                  echo 'export PATH=$HOME/project/node_modules/.bin:$PATH' >> $BASH_ENV
+                  echo 'export PATH=$HOME/project/vendor/bin:$PATH' >> $BASH_ENV
                   echo 'export LINTR_COMMENT_BOT=false' >> $BASH_ENV
                   echo 'export PATH=$HOME/dart-sdk/bin:$PATH' >> $BASH_ENV
                   echo 'export PATH=$HOME/.cabal/bin:$PATH' >> $BASH_ENV
